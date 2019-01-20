@@ -1,6 +1,2 @@
-/* eslint-disable import/prefer-default-export */
-
-import Button from './components/Button';
-import Badge from './components/Badge';
-
-export {Button, Badge};
+export {default as Button} from './components/Button';
+export {default as Badge} from './components/Badge';

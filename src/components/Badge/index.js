@@ -1,7 +1,12 @@
+// @flow
 import React, {Component} from 'react';
+import type {BadgeType} from './Badge.type';
+
 import './index.scss';
 
-class Badge extends Component {
+type Props = BadgeType;
+
+class Badge extends Component<Props> {
   render() {
     const {type, hoverable, children} = this.props;
     let classNames = 'compex-badge compex-badge-pill';
