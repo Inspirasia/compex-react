@@ -1,12 +1,6 @@
-import React from 'react';
-import './index.scss';
+/* eslint-disable import/prefer-default-export */
 
-const TestComponent = () => {
-  return (
-    <div>
-      <h1>Hello component 2</h1>
-    </div>
-  );
-};
+import Button from './components/Button';
+import Badge from './components/Badge';
 
-export default TestComponent;
+export {Button, Badge};

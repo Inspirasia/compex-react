@@ -1,10 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
-
-import TestComponent from '../../src';
+import {Button} from '../../src';
 
 const App = () => {
-  return <TestComponent />;
+  return (
+    <div>
+      <Button>Test button</Button>
+    </div>
+  );
 };
 
 render(<App />, document.getElementById('root'));
