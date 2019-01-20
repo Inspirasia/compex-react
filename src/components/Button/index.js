@@ -1,7 +1,10 @@
+// @flow
 import React, {Component} from 'react';
 import './index.scss';
+import type {ButtonType} from './Button.type';
 
-class Button extends Component {
+type Props = ButtonType;
+class Button extends Component<Props> {
   render() {
     const {
       type,

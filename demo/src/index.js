@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {render} from 'react-dom';
 import {Button} from '../../src';
@@ -5,9 +6,13 @@ import {Button} from '../../src';
 const App = () => {
   return (
     <div>
-      <Button>Test button</Button>
+      <Button type={'primary'}>Test button</Button>
     </div>
   );
 };
 
-render(<App />, document.getElementById('root'));
+const root = document.getElementById('root');
+
+if (root !== null) {
+  render(<App />, root);
+}
