@@ -24,14 +24,13 @@
   "license": "Apache-2.0",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "flow check && lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,md}": [
       "eslint --fix src",
-      "yarn flow",
-      "yarn test:coverage",
+      "yarn test",
       "git add"
     ]
   },
