@@ -11,7 +11,6 @@ class Button extends Component<Props> {
       size,
       block,
       disabled,
-      children,
       icon,
       iconPosition,
       onClick
@@ -59,14 +58,16 @@ class Button extends Component<Props> {
 
     const renderIcon = icon ? <i className={classNamesIcon}>{icon}</i> : null;
     const renderChildren =
-      iconPosition === 'left' ? [renderIcon, children] : [children, renderIcon];
+      iconPosition === 'left'
+        ? [renderIcon, this.props.children]
+        : [this.props.children, renderIcon];
     return (
       <button
         disabled={disabled}
         className={block ? `${classNames} compex-btn-block` : classNames}
         onClick={onClick}>
         {renderChildren.map((child, idx) => (
-          <React.Fragment key={idx}>{child}</React.Fragment>
+          <div key={idx}>{child}</div>
         ))}
       </button>
     );

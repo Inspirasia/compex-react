@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import Button from '.';
 
 describe('render button', () => {
@@ -92,6 +92,14 @@ describe('render button', () => {
     test('disabled button', () => {
       const wrapper = shallow(<Button disabled>disabled</Button>);
       expect(wrapper.prop('disabled')).toEqual(true);
+    });
+  });
+
+  describe('button have child', () => {
+    test('test pass child as props', () => {
+      const wrapper = mount(<Button>child</Button>);
+      expect(wrapper.props('children')).toEqual({children: 'child'});
+      wrapper.unmount();
     });
   });
 });

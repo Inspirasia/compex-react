@@ -38,9 +38,7 @@ describe('render badge', () => {
     });
     test('render hoverable badge', () => {
       const wrapper = shallow(<Badge hoverable>hover</Badge>);
-      expect(
-        wrapper.find('.compex-badge').hasClass('compex-badge-hoverable')
-      ).toEqual(true);
+      expect(wrapper.props('hoverable')).toBeDefined();
     });
   });
 });
