@@ -4,7 +4,9 @@ import type {AlertType} from './Alert.type';
 
 import './index.scss';
 
-class Alert extends Component {
+type Props = AlertType;
+
+class Alert extends Component<Props> {
   render() {
     const {type, title, onClose, children} = this.props;
     let classNames = 'compex-alert';
